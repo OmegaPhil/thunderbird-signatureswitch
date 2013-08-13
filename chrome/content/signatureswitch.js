@@ -733,7 +733,11 @@ var ss_main = {
 
         Recipients2CompFields(gMsgCompose.compFields);
 
+        // Fetching email addresses associated with the message
         var emailAddresses = ss_main.getAddressesFromCompField(gMsgCompose.compFields.to);
+        if (gMsgCompose.compFields.cc.length > 0) emailAddresses.push(ss_main.getAddressesFromCompField(gMsgCompose.compFields.cc));
+        if (gMsgCompose.compFields.bcc.length > 0) emailAddresses.push(ss_main.getAddressesFromCompField(gMsgCompose.compFields.bcc));
+
         var newsgroups = gMsgCompose.compFields.newsgroups;
         var mailinglists = new Array();
 
@@ -744,8 +748,10 @@ var ss_main = {
         var chosenAutoSwitchSignatureForNewsgroups = -1;
         var chosenAutoSwitchSignatureForMailinglists = -1;
 
+        // Checking if there are email addresses to check with ones the user is interested in
         if (emailAddresses.length > 0 && ss_autoSwitchAddresses.length > 0)
         {
+            // There are - constructing regex
             var rx_user = "([a-zA-Z0-9][a-zA-Z0-9_.-]*|\"([^\\\\\x80-\xff\015\012\"]|\\\\[^\x80-\xff])+\")";
             var rx_domain = "([a-zA-Z0-9][a-zA-Z0-9._-]*\\.)*[a-zA-Z0-9][a-zA-Z0-9._-]*\\.[a-zA-Z]{2,5}";
 
@@ -755,6 +761,7 @@ var ss_main = {
             var address;
             var addresses = new Array();
 
+            // Constructing arrays of email addresses of interest for normal mail and mailing lists in the To field
             for (var i = 0; i < emailAddresses.length; i++)
             {
                 address = emailAddresses[i];
@@ -765,6 +772,7 @@ var ss_main = {
                    addresses.push(address);
             }
 
+            // Fetching the appropriate signature
             chosenAutoSwitchSignatureForAddresses = ss_main.findMatchingAutoSwitchSignature(addresses, ss_autoSwitchAddresses, rx, rx_wildcard);
         }
 
