@@ -33,7 +33,7 @@
 <!ENTITY signatureswitch.label.setsignature.shortcut.meta "Meta">
 <!ENTITY signatureswitch.label.setsignature.shortcut.shift "Shift">
 <!ENTITY signatureswitch.label.setsignature.autoswitch "AutoSwitch (optional):">
-<!ENTITY signatureswitch.label.setsignature.autoswitch.description.addresses "Whenever one of the eMail-addresses listed here is among the recipients (not CC or BCC!) then this signature will be chosen automatically.">
+<!ENTITY signatureswitch.label.setsignature.autoswitch.description.addresses "Whenever one of the eMail-addresses listed here is among the recipients (by default not CC or BCC!) then this signature will be chosen automatically.">
 <!ENTITY signatureswitch.label.setsignature.autoswitch.description.newsgroups "Observing entered newsgroup-hosts is also possible:">
 <!ENTITY signatureswitch.label.setsignature.autoswitch.description.wildcard1 "The '?'-character can be used as a wildcard.">
 <!ENTITY signatureswitch.label.setsignature.autoswitch.description.wildcard2 "(Example: '?@mozilla.com', 'test@?.com' or 't?t@m?a.c?' will match when 'test@mozilla.com' is entered as recipient.)">
