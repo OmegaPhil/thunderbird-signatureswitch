@@ -172,6 +172,8 @@
                     </groupbox>
                     <checkbox id="offbydefault" label="&signatureswitch.label.options.offbydefault;" prefstring="extensions.signatureswitch.offbydefault" defaultpref="false"/>
                     <checkbox id="contextmenu" label="&signatureswitch.label.options.contextmenu;" prefstring="extensions.signatureswitch.contextmenu" defaultpref="true"/>
+                    <checkbox id="checkcc" label="&signatureswitch.label.options.checkcc;" prefstring="extensions.signatureswitch.checkcc" defaultpref="false"/>
+                    <checkbox id="checkbcc" label="&signatureswitch.label.options.checkbcc;" prefstring="extensions.signatureswitch.checkbcc" defaultpref="false"/>
             </tabpanel>
             <tabpanel id="miscelleneoustab" flex="1" orient="vertical">
                 <groupbox orient="vertical">

@@ -320,6 +320,8 @@ var ss_main = {
                             "shortcut_cycle_modifier_shift",
                             "offbydefault",
                             "contextmenu",
+                            "checkcc",
+                            "checkbcc",
                             "encoding",
                             "preloadexecutable",
                             "preloadexecutablepath",

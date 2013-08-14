@@ -13,6 +13,8 @@
 <!ENTITY signatureswitch.label.options.button.delete "Delete">
 <!ENTITY signatureswitch.label.options.offbydefault "Switch signature off by default">
 <!ENTITY signatureswitch.label.options.contextmenu "Show 'Signature Switch' in context-menu">
+<!ENTITY signatureswitch.label.options.checkcc "Check CC email addresses">
+<!ENTITY signatureswitch.label.options.checkbcc "Check BCC email addresses">
 <!ENTITY signatureswitch.label.options.shortcut.groupbox "Keyboard shortcuts">
 <!ENTITY signatureswitch.label.options.shortcut.accel "Accelerator">
 <!ENTITY signatureswitch.label.options.shortcut.alt "Alt">
