@@ -735,10 +735,14 @@ var ss_main = {
 
         Recipients2CompFields(gMsgCompose.compFields);
 
-        // Fetching email addresses associated with the message
+        // Fetching preferences
+        checkcc = ss_prefs.getBoolPref("checkcc");
+        checkbcc = ss_prefs.getBoolPref("checkbcc");
+
+        // Fetching email addresses associated with the message, including CC and BCC if desired
         var emailAddresses = ss_main.getAddressesFromCompField(gMsgCompose.compFields.to);
-        if (gMsgCompose.compFields.cc.length > 0) emailAddresses.push(ss_main.getAddressesFromCompField(gMsgCompose.compFields.cc));
-        if (gMsgCompose.compFields.bcc.length > 0) emailAddresses.push(ss_main.getAddressesFromCompField(gMsgCompose.compFields.bcc));
+        if (checkcc && gMsgCompose.compFields.cc.length > 0) emailAddresses = emailAddresses.concat(ss_main.getAddressesFromCompField(gMsgCompose.compFields.cc));
+        if (checkbcc && gMsgCompose.compFields.bcc.length > 0) emailAddresses = emailAddresses.concat(ss_main.getAddressesFromCompField(gMsgCompose.compFields.bcc));
 
         var newsgroups = gMsgCompose.compFields.newsgroups;
         var mailinglists = new Array();
