@@ -736,8 +736,8 @@ var ss_main = {
         Recipients2CompFields(gMsgCompose.compFields);
 
         // Fetching preferences
-        checkcc = ss_prefs.getBoolPref("checkcc");
-        checkbcc = ss_prefs.getBoolPref("checkbcc");
+        var checkcc = ss_prefs.getBoolPref("checkcc");
+        var checkbcc = ss_prefs.getBoolPref("checkbcc");
 
         // Fetching email addresses associated with the message, including CC and BCC if desired
         var emailAddresses = ss_main.getAddressesFromCompField(gMsgCompose.compFields.to);
