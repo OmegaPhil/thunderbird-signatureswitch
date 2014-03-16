@@ -859,6 +859,8 @@ var ss_main = {
         var autoSwitchTrigger;
         var autoSwitchTriggerRegEx;
 
+        var match;
+
         var validate = new RegExp(regEx);
 
         for (var i = 0; i < inputValues.length; i++)
